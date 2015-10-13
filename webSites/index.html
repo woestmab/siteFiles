@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <meta charset=utf-8 />
+    <meta name="BPAD" content="Website for The State of Wisconsin - Bureau of Publishing and Distribution">
+    
+    <title>BPAD Homepage</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!--font awesome icons-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link rel="stylesheet" type="text/css" href="../css/allPages.css">
+    <!-- JavaScript -->
+    <!--google maps js api-->
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <!-- google maps local functions -->
+    <script type="text/javascript" src="../js/google.js"></script>
+    <!-- footer builder -->
+    <script type="text/javascript" src="../js/footer.js"></script>
+    <!-- jQuery scripts -->
+    <script src="../js/jquery-1.11.3.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <!-- Google Maps API
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    -->
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+    
+  </head>
+  
+  <body>
+    <header>
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html" >BPD</a>
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="active headNav"><a href="index.html" title="Home">Home<span class="sr-only">(current)</span></a></li>
+              <li class="headNav"><a href="publishingHome.html" title="Publishing">Publishing<span class="sr-only">(current)</span></a></li>
+              <li class="headNav"><a href="distributionHome.html" title="Distribution">Distribution</a></li>
+              <li class="headNav"><a href="contact.html" title="Contact">Contact<span class="sr-only"></span></a></li>
+            </ul>
+<!-- 
+            <form class="navbar-form navbar-right" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form> -->
+
+            <ul class="nav navbar-nav navbar-left">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                  aria-haspopup="true" aria-expanded="false">
+                  Quick Links<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="distributionPricing.html">Distribution Services</a></li>
+                  <li><a href="publishingPricing.html">Publishing Services</a></li>
+                  <li><a href="ipmCompleted.html">Job Queues</a></li>
+                </ul>
+              </li>
+            </ul>
+
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+    </header>
+
+    <div class="container grayBack grayBackBanner text-center">
+      <h1>Bureau of Publishing &amp; Distribution</h1>
+    </div>
+
+    <section class="mainSection">
+      <div class="container">
+        <div class="row">
+          <a href="publishingHome.html"><img class="col-md-4 col-md-offset-1 hidden-sm hidden-xs" src="../images/placeholder-600x800.jpg"
+          title="Publishing"></a>
+          <a href="distributionHome.html"><img class="col-md-4 col-md-offset-2 hidden-sm hidden-xs"
+          src="../images/placeholder-600x800.jpg" title="Distribution"></a>
+        </div>
+      </div>
+
+      <div id="logoContainer" class="container">
+        <div class="row">
+          <div class="col-md-1 col-md-offset-2 col-xs-5 col-xs-offset-2">
+            <a id="printer" href="publishingHome.html" title="Publishing"><i class="fa fa-print fa-logo"></i></a>
+          </div>
+          <div class="col-md-1 col-md-offset-5 col-xs-5">
+            <a href="distributionHome.html" title="Distribution"><i class="fa fa-envelope-o fa-logo"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <nav class="footNav text-center">
+      </nav>
+    </footer>
+
+    <script>
+      $(function() {
+      //bounce the icons for print and distribution on page load
+      $( ".icon" ).effect( "bounce", { times: 3, distance: 10 }, "medium" );
+
+      buildFooterNav();
+      });
+    </script>
+  </body>
+</html>

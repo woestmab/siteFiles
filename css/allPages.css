@@ -1,0 +1,59 @@
+body {
+	background-color: white;
+    padding-top: 75px;
+}
+
+@media all and (max-width: 750) {
+    body {
+        padding-top: 50px;
+    }
+}
+
+.zOne {
+    z-index: 1;
+}
+
+.zZero {
+    z-index: 0;
+}
+
+.headNav:hover {
+    background-color: #E6E6E6;
+}
+
+.mainSection {
+    margin-top: 20px;
+}
+
+.grayBack {
+	background-color: lightgray;
+}
+
+.grayBackBanner {
+	height: 125px;
+}
+
+.carousel-inner > .item > img {
+    margin: 0 auto;
+}
+
+.carousel-indicators li {
+    background-color: black;
+}
+
+.carousel-indicators .active {
+    background-color: red;
+}
+
+.sideDiv, .contact, .footNav{
+	background-color: lightgray;
+}
+
+.footerNav {
+    display: inline-block;
+    padding: 15px;
+}
+
+footer {
+    padding-top: 25px;
+}

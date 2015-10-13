@@ -1,0 +1,139 @@
+<!-- Created by Brian Woestman on 7/17/15. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8/>
+    <meta name="description" content="description">
+
+    <title>Contact</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/allPages.css">
+    <link rel="stylesheet" type="text/css" href="../css/contact.css">
+
+    <!-- jQuery Scripts -->
+    <script src="../js/jquery-1.11.3.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+
+    <!-- google maps local functions -->
+    <script type="text/javascript" src="../js/google.js"></script>
+    <!--google maps js api-->
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+
+    <!-- footer builder -->
+    <script type="text/javascript" src="../js/footer.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" 
+            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html" >BPD</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="headNav"><a href="index.html" title="Home">Home<span class="sr-only">(current)</span></a></li>
+            <li class="headNav"><a href="publishingHome.html" title="Publishing">Publishing<span class="sr-only">(current)</span></a></li>
+            <li class="headNav"><a href="distributionHome.html" title="Distribution">Distribution</a></li>
+            <li class="active headNav"><a href="contact.html" title="Contact">Contact<span class="sr-only"></span></a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-left">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" 
+                aria-haspopup="true" aria-expanded="false">
+                    Quick Links <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="distributionPricing.html">Distribution Services</a></li>
+                    <li><a href="publishingPricing.html">Publishing Services</a></li>
+                  <li><a href="ipmCompleted.html">Job Queues</a></li>
+                </ul>
+              </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+  </header>
+
+    <div class="container grayBackBanner grayBack">
+        <h1 class="text-center">Contact Us</h1>
+    </div>
+
+    <section class="mainSection">
+        <div class="container">
+            <div class="row">
+                <div class="publishing col-xs-6 grayBack text-center">
+                    <h2>Publishing</h2>
+                    <p>Phone: (608) 243-2404</p>
+                    <p>Fax: (608) 243-2820</p>
+                    <p><a href="mailto:doapublishing@wisconsin.gov">doapublishing@wisconsin.gov</a></p>
+                </div>
+
+                <div class="distribution col-xs-6 grayBack text-center">
+                    <h2>Distribution</h2>
+                    <p>(608) 243-2405</p>
+                    <p>Fax: (608) 243-2820</p>
+                    <p><a href="mailto:doadistribution@wisconsin.gov">doadistribution@wisconsin.gov</a></p>
+                </div>
+            </div>
+
+            <div class="row mainSection">
+                <div class="grayBack text-center col-md-3 col-md-offset-1 col-xs-12">
+                    <h2>Address:</h2>
+                    <p>2310 Darwin Road</p>
+                    <p>Madison, WI  53704-3108</p>
+                    <a href="https://goo.gl/OjTHfL" title="Google Map">Google Map</a>
+                </div>
+
+                <div id="map-canvas" class="col-md-8 col-md-offset-1 hidden-xs hidden-sm"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <nav class="footNav navbar text-center">
+        </nav>
+    </footer>
+
+
+    <script>
+
+        $(function() {
+            var mapReturn = initialize();
+            //drop map maker on hover map-canvas
+            $('#map-canvas').mouseover(function(){
+                dropMarker(mapReturn);
+            });
+          buildFooterNav();
+        });
+
+
+    </script>
+
+</body>
+
+</html>

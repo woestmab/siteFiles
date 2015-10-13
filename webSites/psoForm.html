@@ -1,0 +1,380 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>PSO Form 1.7</title>
+    <meta name="description" content="Publishing Services Order">
+
+    <!-- Custom CSS file -->    
+    <link rel="stylesheet" type="text/css" href="../css/allPages.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="../bootstrap-3.3.5-dist/css/css/bootstrap-theme.min.css">
+
+    <!-- jQuery script -->
+    <script src="../jsFiles/jQuery.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="row">
+        <div id="psoLabel" class="col-xs-4">
+          <p class="center">
+            <br />
+            State of Wisconsin
+            <br />
+            Department of Administration
+            <br />
+            Division of Enterprise Technology
+            <br />
+            DOA-3055 (R02/2014)
+          </p>
+        </div>
+
+        <div id="h1Div" class="col-xs-4">
+          <h1 class="center">Publishing Services Order</h1>
+        </div>
+
+        <div id="psoAddress" class="col-xs-4">
+          <p class="center">
+            <br />
+            <br />
+            Publishing and Distribution Services
+            <br />
+            2310 Darwin Rd, Madison, WI 53740
+          </p>
+        </div>
+      </div>
+
+      <hr />
+
+      <div id="disclaimer" class="col-xs-12">
+        <p  class="center outline">By submitting this Service Order request the agency hereby certifies 
+          that it has been reasonably determined that the printing of this 
+          material will not violate copyright laws, and that the agency assumes
+          full responsibility for this printing request.
+        </p>
+      </div>
+    </header>
+
+    <div class="contianer">
+      <div class="row">
+
+        <button type="button" class="btn btn-primary col-xs-2 col-xs-offset-1" data-toggle="modal" data-target="#formStep1">
+          Order Online
+        </button>
+
+        <div class="dropdown col-xs-2 col-xs-offset-6">
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+            Download Form
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="../documents/doa3055Pdf.pdf">PDF</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="../documents/doa3055MSWord.doc">MS Word</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+
+    <img id="psoImage" src="../images/doa3055PdfTitleCropped.jpg">
+
+    <!-- Modal -->
+    <div class="modal fade" id="formStep1" tabindex="-1" role="dialog" aria-labelledby="formStep1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="formStep1Header">Contact Information</h4>
+          </div>
+          <div class="modal-body">
+          <form class="form-horizontal">
+            <div id="nameDept">
+              <fieldset id="nameDptFieldset">
+                <legend>Name and Department</legend>
+                <div class="row">
+                  <div class="control-group col-xs-6">
+                    <label class="control-label" for="fName">
+                      First
+                    </label>
+                  </div>
+                  <div class="control-group col-xs-6">
+                    <label class="control-label" for="lName">
+                      Last
+                    </label>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="control-group col-xs-6">
+                    <input type="text" id="fName" name="fName" size="35">
+                  </div>
+                  <div class="control-group col-xs-6">
+                    <input type="text" id="lName" name="lName" size="35">
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="control-group col-xs-6">
+                    <label class="control-label" for="department">
+                      Department
+                    </label>
+                  </div>
+                  <div class="control-group col-xs-6">
+                    <label class="control-label" for="division">
+                      Division
+                    </label>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="control-group col-xs-6">
+                    <input type="text" id="department" name="department" size="35">
+                  </div>
+                  <div class="control-group col-xs-6">
+                    <input type="text" id="division" name="division" size="35">
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <br />
+            <div id="address">
+              <fieldset id="addressFieldset">
+                <legend>Address</legend>
+                <div id="streetAddressLabels" class="row">
+                  <div class="control-group col-xs-2">
+                    <label class="control-label" for="streetNumber">
+                      Street #
+                    </label>
+                  </div>
+                  <div class="control-group col-xs-6">
+                    <label class="control-label" for="street">
+                      Street Name
+                    </label>
+                  </div>
+                  <div class="control-group col-xs-4">
+                      <label class="control-label" for="suiteFloor">
+                        Suite/Floor
+                      </label>
+                  </div>
+                </div>
+
+                <div id="streetAddressInputs" class="row">
+                  <div class="control-group col-xs-2">
+                    <input type="text" id="streetNumber" name="streetNumber" size="6">
+                  </div>
+                  <div class="control-group col-xs-6">
+                    <input type="text" id="street" name="street" size="34">
+                  </div>
+                  <div class="control-group col-xs-4">
+                    <input type="text" id="suiteFloor" name="suiteFloor" size="10">
+                  </div>
+                </div>
+
+                <div id="cityStateLabels" class="row">
+                  <div class="control-group col-xs-4">
+                    <label class="control-label" for="stateInput">
+                      City
+                    </label>
+                  </div>
+                  <div class="control-group col-xs-4">
+                    <label class="control-label" for="stateInput">
+                      State
+                    </label>
+                  </div>
+                  <div class="control-group col-xs-4">
+                      <label class="control-label" for="zipCodeInput">
+                        Zip Code
+                      </label>
+                  </div>
+                </div>
+
+                <div id="cityStateLabels2" class="row">
+                  <div class="control-group col-xs-4">
+                    <input type="text" id="stateInput2" name="stateInput">
+                  </div>
+                  <div class="control-group col-xs-4">
+                    <input type="text" id="stateInput" name="stateInput">
+                  </div>
+                  <div class="control-group col-xs-4">
+                    <input type="text" id="zipCodeInput" name="zipCodeInput">
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#formStep2">Next</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="formStep2" tabindex="-1" role="dialog" aria-labelledby="step2Label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="step2Label">File Information</h4>
+          </div>
+          <div class="modal-body">
+          <form class="form-horizontal">
+            <div>
+              <fieldset id="fileNameFieldset">
+                <legend>File Name</legend>
+                  <div id="fileNameLabels" class="row">
+                    <div class="control-group col-xs-6">
+                      <label class="control-label" for="fileName">
+                        Publication or File Name
+                      </label>
+                    </div>
+                    <div class="control-group col-xs-6">
+                      <label class="control-label" for="archiveOutput">
+                        Output from Archive (DOA#)
+                      </label>
+                    </div>
+                  </div>
+
+                  <div id="fileNameLabels" class="row">
+                    <div class="control-group col-xs-6">
+                      <input type="text" id="fileName" name="fileName" size="30">
+                    </div>
+                    <div class="control-group col-xs-6">
+                      <input type="text" id="archiveOutput" name="archiveOutput" size="30">
+                    </div>
+                  </div>
+              </fieldset>
+              <br />
+              <fieldset id="originalCheckboxFieldset">
+                <legend>Original</legend>
+                <div id="originalCheckboxes"class="row">
+                  <div class="checkbox col-xs-3">
+                    <label>
+                      <input type="checkbox">Hard Copy
+                    </label>
+                  </div>
+                  <div class="checkbox col-xs-3">
+                    <label>
+                      <input type="checkbox">FTP
+                    </label>
+                  </div>
+                  <div class="checkbox col-xs-3">
+                    <label>
+                      <input type="checkbox">Disk
+                    </label>
+                  </div>
+                  <div class="checkbox col-xs-3">
+                    <label>
+                      <input type="checkbox">Email
+                    </label>
+                  </div>
+                </div>
+                <br />
+                <span id="uploadButton"class="btn btn-primary btn-file">File Upload
+                  <input type="file">
+                </span>
+              </fieldset>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#step3">Next</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="formStep3" tabindex="-1" role="dialog" aria-labelledby="step3Label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="step3">File Information</h4>
+          </div>
+          <div class="modal-body">
+          <form class="form-horizontal">
+            <div>
+              <fieldset id="fileNameFieldset">
+                <legend>File Name</legend>
+                  <div id="fileNameLabels" class="row">
+                    <div class="control-group col-xs-6">
+                      <label class="control-label" for="fileName">
+                        Publication or File Name
+                      </label>
+                    </div>
+                    <div class="control-group col-xs-6">
+                      <label class="control-label" for="archiveOutput">
+                        Output from Archive (DOA#)
+                      </label>
+                    </div>
+                  </div>
+
+                  <div id="fileNameLabels" class="row">
+                    <div class="control-group col-xs-6">
+                      <input type="text" id="fileName" name="fileName" size="30">
+                    </div>
+                    <div class="control-group col-xs-6">
+                      <input type="text" id="archiveOutput" name="archiveOutput" size="30">
+                    </div>
+                  </div>
+              </fieldset>
+              <br />
+              <fieldset id="originalCheckboxFieldset">
+                <legend>Original</legend>
+                <div id="originalCheckboxes"class="row">
+                  <div class="checkbox col-xs-3">
+                    <label>
+                      <input type="checkbox">Hard Copy
+                    </label>
+                  </div>
+                  <div class="checkbox col-xs-3">
+                    <label>
+                      <input type="checkbox">FTP
+                    </label>
+                  </div>
+                  <div class="checkbox col-xs-3">
+                    <label>
+                      <input type="checkbox">Disk
+                    </label>
+                  </div>
+                  <div class="checkbox col-xs-3">
+                    <label>
+                      <input type="checkbox">Email
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+              </div>
+              <br />
+            </form>
+          </div>
+
+            <span id="uploadButton"class="btn btn-primary btn-file">File Upload
+              <input type="file">
+            </span>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#step2">Next</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+
+  </body>
+</html>

@@ -1,0 +1,190 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>BPD Pricing Calculator</title>
+  <meta name="description" content="BPD Pricing">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+
+  <!-- jQuery Script -->
+  <script src="../js/jquery-1.11.3.js"></script>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="../js/bootstrap.min.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="../css/allPages.css">
+
+</head>
+
+<body>
+  <h1>BPD Pricing Calculator</h1>
+  <label for="selectMe">Choose a Calculator:</label>
+  <select id="selectMe">
+    <option value="mainframe">Mainframe</option>
+    <option value="network">Network</option>
+    <option value="digital">Digital Color</option>
+    <option value="largeFormat">Large Format Color</option>
+    <option value="graphicDesign">Graphic Design</option>
+    <option value="inkJet">Ink Jet</option>
+    <option value="tabbing">Tabbing</option>
+    <option value="other">Other Services</option>
+  </select>
+
+  <div id="mainframe" class="main">
+    <form name="mainframeForm" id="mainframeForm">
+          <h2>Mainframe</h2>
+      <label for="mainframeSelect">Mainframe</label>
+          <select id="mainframeSelect">
+            <option value="impactDiv">Impact</option>
+            <option value="laserDiv">Laser</option>
+          </select>
+      
+            <div id="impactDiv" class="mainframeSub">
+            <h3>Impact Print</h3>
+              <label for="impactPageInput">Page Count</label>
+              <input type="number" name="impactPageInput" id="impactPageInput">
+              <button type="button" onclick="return mainframeImpactCalc()">Check Price</button>
+            </div>
+      
+            <div id="laserDiv" class="mainframeSub">
+              <h3>Laser Print</h3>
+              <label for="laserPageInput">Page Count</label>
+              <input type="number" name="laserPageInput" id="laserPageInput">
+              <button type="button" onclick="return mainframeLaserCalc()">Check Price</button>
+          </div>
+    </form>
+  </div>
+
+  <div id="network" class="main">
+    <form name="network" id="networkForm">
+      <h2>Network</h2>
+      <label for="networkSelect">Network</label>
+      <select id="networkSelect">
+        <option value="81">8.5 x 11</option>
+        <option value="82">11 x 17</option>
+      </select>
+      <div>
+        <label for="simplex">Side One</label>
+        <input id="simplex" type="number">
+        <label for="sideTwo">Side Two</label>
+        <input id="sideTwo" type="number">
+        <button type="button" onclick="return networkCalc()">Check Price</button>
+      </div>
+    </form>
+  </div>
+
+  <div id="digital" class="main">digital
+  </div>
+
+  <div id="largeFormat" class="main">largeFormat
+  </div>
+
+  <div id="graphicDesign" class="main">graphicDesign
+  </div>
+
+  <div id="inkJet" class="main">inkJet
+  </div>
+
+  <div id="tabbing" class="main">tabbing
+  </div>
+
+  <div id="other" class="main">other
+  </div>
+
+  <div id="outputDiv"></div>
+
+  <script type="text/javascript">
+
+    function mainframeImpactCalc() {
+
+      var BASE_PRICE = 4;
+      var PAGE_PRICE = .3;
+
+      var impact = $('#impactPageInput').val();
+      var priceCalculation;
+
+      if (impact >= 1 && impact <= 13) {
+        priceCalculation = BASE_PRICE;
+      } else if (impact >= 14) {
+        priceCalculation = impact * PAGE_PRICE;
+      }
+
+      output(priceCalculation);
+    }
+
+    function mainframeLaserCalc() {
+
+      var BASE_PRICE = 2.08;
+      var PAGE_PRICE = .032;
+
+      var laser = $('#laserPageInput').val();
+      var priceCalculation;
+
+      if (laser >= 1 && laser <= 65) {
+        priceCalculation = BASE_PRICE;
+      } else if (laser >= 66) {
+        priceCalculation = PAGE_PRICE * laser;
+      }
+
+      output(priceCalculation);
+
+    }
+
+    function networkCalc(){
+      var SIMPLEX_81 = .035;
+      var SIDE_TWO_81 = .033;
+      var SIMPLEX_82 = .052;
+      var SIDE_TWO_82 = .049;
+
+      var priceCalculation = 0;
+      var paperSize = $('#networkSelect').val();
+      var simplexPages = $('#simplex').val();
+      var sideTwoPages = $('#sideTwo').val();
+
+      if (paperSize === 81) {
+	      priceCalculation = (SIMPLEX_81 * simplexPages) + (SIDE_TWO_81 * sideTwoPages);
+      } else if (paperSize === 82) {
+				priceCalculation = (SIMPLEX_82 * simplexPages) + (SIDE_TWO_82 * sideTwoPages);
+      }
+
+      output(priceCalculation);
+    }
+
+    function output(priceCalculation) {
+      $('#outputDiv').html("<h1>Cost: " + "$" + priceCalculation.toFixed(2) + "<h1>");
+      $('this').fadeIn(150);
+    }
+
+    $(document).ready(function () {
+
+      $('.mainframeSub').hide();
+      $('#impactDiv').fadeIn(150);
+
+      $('#mainframeSelect').change(function () {
+        $('.mainframeSub').hide();
+        $('#outputDiv').hide();
+        $('#'+$(this).val()).fadeIn(150);
+      })
+
+      $('.main').hide();
+      $('#mainframe').show();
+
+      $('#selectMe').change(function () {
+        $('.main').hide();
+        $('#outputDiv').hide();
+        $('#'+ $(this).val()).fadeIn(150);
+      })
+    });
+
+  </script>
+
+</body>
+</html>

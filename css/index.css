@@ -1,0 +1,55 @@
+h2 {
+    text-shadow: 0px 0px 8px black;
+}
+
+.divPad {
+    padding: 15px;
+}
+
+#map-canvas {
+    width: 500px;
+    height: 400px;
+}
+
+#map-background {
+    background-color: #FFE269;
+    width: 550px;
+    height: 450px;
+}
+
+.fa {
+    color: dimgray;
+    font-size: 10em;
+    transition: all .5s ease-in-out;
+}
+
+.fa-brand {
+    color: red;
+    font-size: 1.5em;
+    text-shadow: 3px 3px 3px black;
+}
+
+.fa-logo:hover {
+    color: #BBBBBB;
+    text-shadow: 25px 25px 25px black;
+}
+
+.bigger {
+    font-size: 1.5em;
+}
+
+#bannerPic {
+    width: 100%;
+}
+
+.carousel-inner > .item > img {
+    margin: 0 auto;
+}
+
+.carousel-indicators li {
+    background-color: black;
+}
+
+.carousel-indicators .active {
+    background-color: red;
+}
