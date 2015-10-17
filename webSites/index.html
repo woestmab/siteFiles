@@ -50,10 +50,10 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-              <li class="active headNav"><a href="index.html" title="Home">Home<span class="sr-only">(current)</span></a></li>
-              <li class="headNav"><a href="publishingHome.html" title="Publishing">Publishing<span class="sr-only">(current)</span></a></li>
-              <li class="headNav"><a href="distributionHome.html" title="Distribution">Distribution</a></li>
-              <li class="headNav"><a href="contact.html" title="Contact">Contact<span class="sr-only"></span></a></li>
+              <li class="active headNav fadeInHover"><a href="index.html" title="Home">Home<span class="sr-only">(current)</span></a></li>
+              <li class="headNav fadeInHover"><a href="publishingHome.html" title="Publishing">Publishing<span class="sr-only">(current)</span></a></li>
+              <li class="headNav fadeInHover"><a href="distributionHome.html" title="Distribution">Distribution</a></li>
+              <li class="headNav fadeInHover"><a href="contact.html" title="Contact">Contact<span class="sr-only"></span></a></li>
             </ul>
 <!-- 
             <form class="navbar-form navbar-right" role="search">
@@ -70,9 +70,9 @@
                   Quick Links<span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a href="distributionPricing.html">Distribution Services</a></li>
-                  <li><a href="publishingPricing.html">Publishing Services</a></li>
-                  <li><a href="ipmCompleted.html">Job Queues</a></li>
+                  <li class="fadeInHover"><a href="distributionPricing.html">Distribution Services</a></li>
+                  <li class="fadeInHover"><a href="publishingPricing.html">Publishing Services</a></li>
+                  <li class="fadeInHover"><a href="ipmCompleted.html">Job Queues</a></li>
                 </ul>
               </li>
             </ul>
@@ -117,6 +117,8 @@
       $(function() {
       //bounce the icons for print and distribution on page load
       $( ".icon" ).effect( "bounce", { times: 3, distance: 10 }, "medium" );
+
+      //$("nav.navbar > li").click("pulsate");
 
       buildFooterNav();
       });

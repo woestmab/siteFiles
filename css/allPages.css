@@ -17,7 +17,11 @@ body {
     z-index: 0;
 }
 
-.headNav:hover {
+.headNav, .dropdown, .fadeInHover {
+    transition: all .25s ease-out;
+}
+
+.headNav:hover, .dropdown:hover, .fadeInHover:hover {
     background-color: #E6E6E6;
 }
 
